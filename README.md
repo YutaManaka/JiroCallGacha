@@ -1,5 +1,5 @@
 # 二郎コールガチャ
-<img src="https://user-images.githubusercontent.com/54618797/126992902-a489a2a3-a317-465d-a9aa-ee0548dcb3f4.png" width="200">
+<img src="https://user-images.githubusercontent.com/54618797/127159681-bf385025-0c10-4ba0-a166-ee8e9a47a628.png" width="200">
 
 <img src="https://user-images.githubusercontent.com/54618797/126992921-def5c725-665c-4f8a-9a81-2714332043ed.png" width="200">
 
