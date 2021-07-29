@@ -8,16 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Gacha View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JiroCallGenerator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GachaViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="GachaViewController" customModule="JiroCallGenerator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="34g-f7-e5z">
-                                <rect key="frame" x="57" y="4657" width="300" height="100"/>
+                                <rect key="frame" x="57" y="669" width="300" height="100"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="TRA-xP-IA4"/>
@@ -41,7 +41,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WYW-6s-fxJ">
-                                <rect key="frame" x="0.0" y="88" width="414" height="4145.5"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="520"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="あなたの二郎コールは..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jK-IY-zRx">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="20.5"/>
@@ -50,37 +50,37 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="フツウ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffB-Yq-yvP">
-                                        <rect key="frame" x="0.0" y="20.5" width="414" height="2011"/>
+                                        <rect key="frame" x="0.0" y="20.5" width="414" height="234.5"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Z0-Fp-cuu">
-                                        <rect key="frame" x="0.0" y="2031.5" width="414" height="414.5"/>
+                                        <rect key="frame" x="0.0" y="255" width="414" height="52"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFb-he-2ao">
-                                        <rect key="frame" x="0.0" y="2446" width="414" height="414.5"/>
+                                        <rect key="frame" x="0.0" y="307" width="414" height="52"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pv-Kj-BSq">
-                                        <rect key="frame" x="0.0" y="2860.5" width="414" height="456"/>
+                                        <rect key="frame" x="0.0" y="359" width="414" height="57"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laV-DV-iBx">
-                                        <rect key="frame" x="0.0" y="3316.5" width="414" height="414.5"/>
+                                        <rect key="frame" x="0.0" y="416" width="414" height="52"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNg-Gx-8C6">
-                                        <rect key="frame" x="0.0" y="3731" width="414" height="414.5"/>
+                                        <rect key="frame" x="0.0" y="468" width="414" height="52"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
@@ -95,6 +95,27 @@
                                     <constraint firstItem="UNg-Gx-8C6" firstAttribute="height" secondItem="WYW-6s-fxJ" secondAttribute="height" multiplier="0.1" id="vuq-1s-47s"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4OX-P7-DzR">
+                                <rect key="frame" x="132" y="797" width="150" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="RLM-sl-Sf4"/>
+                                    <constraint firstAttribute="width" constant="150" id="k2O-9S-0Ra"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="自分で作る">
+                                            <attributes>
+                                                <color key="NSColor" red="0.96078431372549022" green="0.83529411764705885" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="24" name="HiraginoSans-W7"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="tapGeneratorBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Dm-yR-XSX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -103,12 +124,15 @@
                             <constraint firstItem="34g-f7-e5z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.6" id="9k1-c1-9nL"/>
                             <constraint firstItem="34g-f7-e5z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IRF-aG-wRI"/>
                             <constraint firstItem="WYW-6s-fxJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kmc-nb-Obt"/>
+                            <constraint firstItem="4OX-P7-DzR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.85" constant="1" id="RU2-d9-lyv"/>
+                            <constraint firstItem="4OX-P7-DzR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YQy-m9-jvL"/>
                             <constraint firstItem="WYW-6s-fxJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" multiplier="2" id="iHL-x8-oo8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WYW-6s-fxJ" secondAttribute="trailing" id="rxH-YG-1UN"/>
                             <constraint firstItem="34g-f7-e5z" firstAttribute="top" secondItem="WYW-6s-fxJ" secondAttribute="bottom" multiplier="1.1" id="wIz-Va-mxr"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="GeneratorBtn" destination="4OX-P7-DzR" id="CsE-bc-Li5"/>
                         <outlet property="gacyaButton" destination="34g-f7-e5z" id="V2D-Li-6ed"/>
                         <outlet property="garlicText" destination="3Z0-Fp-cuu" id="Jet-7K-PFW"/>
                         <outlet property="normal" destination="ffB-Yq-yvP" id="3Zh-ej-yNs"/>

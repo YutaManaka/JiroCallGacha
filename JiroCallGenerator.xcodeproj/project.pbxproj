@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F52CA48626B2D95400ECD1F9 /* FirstView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F52CA48526B2D95400ECD1F9 /* FirstView.storyboard */; };
+		F52CA48826B2DAF400ECD1F9 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52CA48726B2DAF400ECD1F9 /* FirstViewController.swift */; };
+		F52CA48C26B2E15C00ECD1F9 /* GeneratorView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F52CA48B26B2E15C00ECD1F9 /* GeneratorView.storyboard */; };
+		F52CA48E26B2E17B00ECD1F9 /* GeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52CA48D26B2E17B00ECD1F9 /* GeneratorViewController.swift */; };
 		F5F3DC0826AA581000128973 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F3DC0726AA581000128973 /* AppDelegate.swift */; };
 		F5F3DC0A26AA581000128973 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F3DC0926AA581000128973 /* SceneDelegate.swift */; };
-		F5F3DC0C26AA581000128973 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F3DC0B26AA581000128973 /* ViewController.swift */; };
-		F5F3DC0F26AA581000128973 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F3DC0D26AA581000128973 /* Main.storyboard */; };
+		F5F3DC0C26AA581000128973 /* GachaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F3DC0B26AA581000128973 /* GachaViewController.swift */; };
+		F5F3DC0F26AA581000128973 /* GachaView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F3DC0D26AA581000128973 /* GachaView.storyboard */; };
 		F5F3DC1126AA581200128973 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5F3DC1026AA581200128973 /* Assets.xcassets */; };
 		F5F3DC1426AA581200128973 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F3DC1226AA581200128973 /* LaunchScreen.storyboard */; };
 		F5F3DC1F26AA581200128973 /* JiroCallGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F3DC1E26AA581200128973 /* JiroCallGeneratorTests.swift */; };
@@ -35,11 +39,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F52CA48526B2D95400ECD1F9 /* FirstView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstView.storyboard; sourceTree = "<group>"; };
+		F52CA48726B2DAF400ECD1F9 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		F52CA48B26B2E15C00ECD1F9 /* GeneratorView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GeneratorView.storyboard; sourceTree = "<group>"; };
+		F52CA48D26B2E17B00ECD1F9 /* GeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorViewController.swift; sourceTree = "<group>"; };
 		F5F3DC0426AA581000128973 /* JiroCallGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JiroCallGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5F3DC0726AA581000128973 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5F3DC0926AA581000128973 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F5F3DC0B26AA581000128973 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F5F3DC0E26AA581000128973 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F5F3DC0B26AA581000128973 /* GachaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GachaViewController.swift; sourceTree = "<group>"; };
+		F5F3DC0E26AA581000128973 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/GachaView.storyboard; sourceTree = "<group>"; };
 		F5F3DC1026AA581200128973 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5F3DC1326AA581200128973 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5F3DC1526AA581200128973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,10 +109,14 @@
 			children = (
 				F5F3DC0726AA581000128973 /* AppDelegate.swift */,
 				F5F3DC0926AA581000128973 /* SceneDelegate.swift */,
-				F5F3DC0B26AA581000128973 /* ViewController.swift */,
-				F5F3DC0D26AA581000128973 /* Main.storyboard */,
+				F5F3DC0B26AA581000128973 /* GachaViewController.swift */,
+				F5F3DC0D26AA581000128973 /* GachaView.storyboard */,
 				F5F3DC1026AA581200128973 /* Assets.xcassets */,
+				F52CA48526B2D95400ECD1F9 /* FirstView.storyboard */,
+				F52CA48726B2DAF400ECD1F9 /* FirstViewController.swift */,
 				F5F3DC1226AA581200128973 /* LaunchScreen.storyboard */,
+				F52CA48B26B2E15C00ECD1F9 /* GeneratorView.storyboard */,
+				F52CA48D26B2E17B00ECD1F9 /* GeneratorViewController.swift */,
 				F5F3DC1526AA581200128973 /* Info.plist */,
 			);
 			path = JiroCallGenerator;
@@ -231,9 +243,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F52CA48C26B2E15C00ECD1F9 /* GeneratorView.storyboard in Resources */,
 				F5F3DC1426AA581200128973 /* LaunchScreen.storyboard in Resources */,
 				F5F3DC1126AA581200128973 /* Assets.xcassets in Resources */,
-				F5F3DC0F26AA581000128973 /* Main.storyboard in Resources */,
+				F5F3DC0F26AA581000128973 /* GachaView.storyboard in Resources */,
+				F52CA48626B2D95400ECD1F9 /* FirstView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +272,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5F3DC0C26AA581000128973 /* ViewController.swift in Sources */,
+				F52CA48826B2DAF400ECD1F9 /* FirstViewController.swift in Sources */,
+				F52CA48E26B2E17B00ECD1F9 /* GeneratorViewController.swift in Sources */,
+				F5F3DC0C26AA581000128973 /* GachaViewController.swift in Sources */,
 				F5F3DC0826AA581000128973 /* AppDelegate.swift in Sources */,
 				F5F3DC0A26AA581000128973 /* SceneDelegate.swift in Sources */,
 			);
@@ -296,12 +312,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F5F3DC0D26AA581000128973 /* Main.storyboard */ = {
+		F5F3DC0D26AA581000128973 /* GachaView.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F5F3DC0E26AA581000128973 /* Base */,
 			);
-			name = Main.storyboard;
+			name = GachaView.storyboard;
 			sourceTree = "<group>";
 		};
 		F5F3DC1226AA581200128973 /* LaunchScreen.storyboard */ = {
@@ -443,7 +459,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = YutaManaka.JiroCallGenerator;
+				PRODUCT_BUNDLE_IDENTIFIER = YutaManaka.RamenCallGacha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -462,7 +478,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = YutaManaka.JiroCallGenerator;
+				PRODUCT_BUNDLE_IDENTIFIER = YutaManaka.RamenCallGacha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

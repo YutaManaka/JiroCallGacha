@@ -7,9 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GachaViewController: UIViewController {
     //ボタンの宣言
     @IBOutlet weak var gacyaButton: UIButton!
+    @IBOutlet weak var GeneratorBtn: UIButton!
     // 乱数の宣言
     var garlicNumber = 0
     var vegetableNumber = 0
@@ -22,7 +23,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var porkBackFatText: UILabel!
     @IBOutlet weak var soySourceText: UILabel!
     @IBOutlet weak var normal: UILabel!
+
     
+    //遷移ボタン
+    @IBAction func tapGeneratorBtn(_ sender: Any) {
+        // Storyboardのインスタンスを名前指定で取得する
+        let storyboard = UIStoryboard(name: "GeneratorView", bundle: nil)
+        // Storyboard内で'is initial'に指定されているViewControllerを取得する
+        let nextVC = storyboard.instantiateInitialViewController() as! GeneratorViewController
+        // FullScreenにする
+        nextVC.modalPresentationStyle = .fullScreen
+        // presentする
+        self.present(nextVC, animated: true, completion: nil)
+
+    }
+
     //ボタンを押した際の操作
     @IBAction func garlic(_ sender: Any) {
         garlicNumber = Int(arc4random_uniform(5))
@@ -91,7 +106,6 @@ class ViewController: UIViewController {
         } else {
             normal.isHidden = true
         }
-        
     }
         
     override func viewDidLoad() {
@@ -102,6 +116,10 @@ class ViewController: UIViewController {
         gacyaButton.layer.borderWidth = 5
         gacyaButton.layer.borderColor = UIColor.red.cgColor
         gacyaButton.layer.cornerRadius = 5.0
+        GeneratorBtn.backgroundColor = buttonColor
+//        GeneratorBtn.layer.borderWidth = 5
+//        GeneratorBtn.layer.borderColor = UIColor.red.cgColor
+        GeneratorBtn.layer.cornerRadius = 5.0
         let buttonTextColor = UIColor(red: 247/255, green: 229/255, blue: 4/255, alpha: 1.0)
         gacyaButton.setTitleColor(buttonTextColor, for: UIControl.State.normal)
         //テキストの装飾
