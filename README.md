@@ -15,6 +15,12 @@
 あなたが納得するまで「ニンニク入れますか」ボタンを押してください。
 あなたが思い付かないような組み合わせのコールに出会えるかもしれませんよ！
 
+## 参考資料
+[Swift5 同じビュー内に違う値を持つPickerViewを2つ表示する方法](https://etolog.jp/archives/pickerview_memo.html)
+[iOSアプリ開発/textFieldでPickerView(ドラムロール)を実装/Swift](https://qiita.com/kayo311/items/dce998311bbaa98ff771)
+[複数のpickerViewを配置する例](https://qiita.com/shinsakujazzbass/items/a06dd3c69d6c91a9691c)
+[ツールバー付きピッカービュー（pickerview）、ドラムロールの使い方](https://www.zinbloger.com/2021/05/swiftpickerview2/)
+
 ## 利用者情報の取得・利用・第三者提供
 このアプリは利用者の個人情報を取得・利用・第三者提供をしません。
 
