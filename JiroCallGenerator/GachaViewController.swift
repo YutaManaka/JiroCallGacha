@@ -24,21 +24,7 @@ class GachaViewController: UIViewController {
     @IBOutlet weak var soySourceText: UILabel!
     @IBOutlet weak var normal: UILabel!
 
-    
-    //遷移ボタン
-    @IBAction func tapGeneratorBtn(_ sender: Any) {
-        // Storyboardのインスタンスを名前指定で取得する
-        let storyboard = UIStoryboard(name: "GeneratorView", bundle: nil)
-        // Storyboard内で'is initial'に指定されているViewControllerを取得する
-        let nextVC = storyboard.instantiateInitialViewController() as! GeneratorViewController
-        // FullScreenにする
-        nextVC.modalPresentationStyle = .fullScreen
-        // presentする
-        self.present(nextVC, animated: true, completion: nil)
-
-    }
-
-    //ボタンを押した際の操作
+    // gacyaButtonボタンを押した際の操作
     @IBAction func garlic(_ sender: Any) {
         garlicNumber = Int(arc4random_uniform(5))
         switch garlicNumber {
@@ -107,6 +93,19 @@ class GachaViewController: UIViewController {
             normal.isHidden = true
         }
     }
+    
+    //遷移ボタンGeneratorBtnを押したときの動作
+    @IBAction func tapGeneratorBtn(_ sender: Any) {
+        // Storyboardのインスタンスを名前指定で取得する
+        let storyboard = UIStoryboard(name: "GeneratorView", bundle: nil)
+        // Storyboard内で'is initial'に指定されているViewControllerを取得する
+        let nextVC = storyboard.instantiateInitialViewController() as! GeneratorViewController
+        // FullScreenにする
+        nextVC.modalPresentationStyle = .fullScreen
+        // presentする
+        self.present(nextVC, animated: true, completion: nil)
+
+    }
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,8 +116,6 @@ class GachaViewController: UIViewController {
         gacyaButton.layer.borderColor = UIColor.red.cgColor
         gacyaButton.layer.cornerRadius = 5.0
         GeneratorBtn.backgroundColor = buttonColor
-//        GeneratorBtn.layer.borderWidth = 5
-//        GeneratorBtn.layer.borderColor = UIColor.red.cgColor
         GeneratorBtn.layer.cornerRadius = 5.0
         let buttonTextColor = UIColor(red: 247/255, green: 229/255, blue: 4/255, alpha: 1.0)
         gacyaButton.setTitleColor(buttonTextColor, for: UIControl.State.normal)

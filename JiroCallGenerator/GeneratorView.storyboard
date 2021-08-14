@@ -105,6 +105,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="generateCall:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="eJB-XX-93M"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -130,6 +133,7 @@
                     </view>
                     <connections>
                         <outlet property="GachaBtn" destination="dff-Ka-Xjg" id="gyF-4d-gLv"/>
+                        <outlet property="callText" destination="zZ7-NE-AgM" id="v88-U6-JaX"/>
                         <outlet property="garlicTextField" destination="77r-6h-Gta" id="R1O-S6-Dsc"/>
                         <outlet property="generatorButton" destination="3kX-Yk-Akj" id="mvE-9i-Hex"/>
                         <outlet property="porkBackFatTextField" destination="R6q-8n-zXM" id="di5-BA-DbS"/>

@@ -8,28 +8,24 @@
 import UIKit
 
 class GeneratorViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-    //ボタンの宣言
+    // ラベルの宣言
+    @IBOutlet weak var callText: UILabel!
+    var garlicText = ""
+    var vegetableText = ""
+    var porkBackFatText = ""
+    var soySourceText = ""
+    
+    // ボタンの宣言
     @IBOutlet weak var generatorButton: UIButton!
     @IBOutlet weak var GachaBtn: UIButton!
     
-    //ドラムロールの宣言
+    // ドラムロールの宣言
     // TODO2 4つのtextfieldの位置をレスポンシブにする
     @IBOutlet weak var garlicTextField: UITextField!
     @IBOutlet weak var vegetableTextField: UITextField!
     @IBOutlet weak var porkBackFatTextField: UITextField!
     @IBOutlet weak var soySourceTextField: UITextField!
-       
-    //遷移ボタンの動作
-    @IBAction func tapGachaBtn(_ sender: Any) {
-        // Storyboardのインスタンスを名前指定で取得する
-        let storyboard = UIStoryboard(name: "GachaView", bundle: nil)
-        // Storyboard内で'is initial'に指定されているViewControllerを取得する
-        let nextVC = storyboard.instantiateInitialViewController() as! GachaViewController
-        // FullScreenにする
-        nextVC.modalPresentationStyle = .fullScreen
-        // presentする
-        self.present(nextVC, animated: true, completion: nil)
-    }
+    
     // ドラムロール設定
     // ドラムロールのリスト
     var garlicPickerView = UIPickerView()
@@ -140,7 +136,73 @@ class GeneratorViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     // generatorButtonボタンを押したときの動作
     // TODO ボタンを押したらコールが出る処理
+    @IBAction func generateCall(_ sender: Any) {
+        switch garlicTextField.text {
+            case "ニンニク抜き":
+                garlicText = "ニンニクヌキ"
+            case "ニンニク少なめ":
+                garlicText = "ニンニクスクナメ"
+            case "ニンニク普通":
+                garlicText = ""
+            case "ニンニク多め":
+                garlicText = "ニンニクマシ"
+            case "ニンニク超多め":
+                garlicText = "ニンニクマシマシ"
+            default:
+                garlicText = ""
+        }
+        switch vegetableTextField.text {
+            case "ヤサイ少なめ":
+                vegetableText = "ヤサイスクナメ"
+            case "ヤサイ普通":
+                vegetableText = ""
+            case "ヤサイ多め":
+                vegetableText = "ヤサイマシ"
+            case "ヤサイ超多め":
+                vegetableText = "ヤサイマシマシ"
+            default:
+                vegetableText = ""
+        }
+        switch porkBackFatTextField.text {
+            case "背脂抜き":
+                garlicText = "アブラヌキ"
+            case "背脂少なめ":
+                porkBackFatText = "アブラスクナメ"
+            case "背脂普通":
+                porkBackFatText = ""
+            case "背脂多め":
+                porkBackFatText = "アブラマシ"
+            case "背脂超多め":
+                porkBackFatText = "アブラマシマシ"
+            default:
+                porkBackFatText = ""
+        }
+        switch soySourceTextField.text {
+            case "味普通":
+                soySourceText = ""
+            case "味濃いめ":
+                soySourceText = "カラメ"
+            default:
+                soySourceText = ""
+        }
+        if garlicText.isEmpty && vegetableText.isEmpty && porkBackFatText.isEmpty && soySourceText.isEmpty {
+            callText.text = "フツウ"
+        } else {
+            callText.text = garlicText + vegetableText + porkBackFatText + soySourceText
+        }
+    }
     
+    //遷移ボタンの動作
+    @IBAction func tapGachaBtn(_ sender: Any) {
+        // Storyboardのインスタンスを名前指定で取得する
+        let storyboard = UIStoryboard(name: "GachaView", bundle: nil)
+        // Storyboard内で'is initial'に指定されているViewControllerを取得する
+        let nextVC = storyboard.instantiateInitialViewController() as! GachaViewController
+        // FullScreenにする
+        nextVC.modalPresentationStyle = .fullScreen
+        // presentする
+        self.present(nextVC, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
