@@ -23,6 +23,11 @@ class GachaViewController: UIViewController {
     @IBOutlet weak var porkBackFatText: UILabel!
     @IBOutlet weak var soySourceText: UILabel!
     @IBOutlet weak var normal: UILabel!
+    //その他パーツ宣言
+    @IBOutlet weak var stackSpace: UIView!
+    @IBOutlet weak var space: UIView!
+    @IBOutlet weak var space2: UIView!
+    @IBOutlet weak var space3: UIView!
 
     // gacyaButtonボタンを押した際の操作
     @IBAction func garlic(_ sender: Any) {
@@ -125,5 +130,9 @@ class GachaViewController: UIViewController {
         UILabel.appearance().textColor = UIColor.black
         //背景色
         view.backgroundColor = buttonTextColor
+        stackSpace.backgroundColor = buttonTextColor
+        space.backgroundColor = buttonTextColor
+        space2.backgroundColor = buttonTextColor
+        space3.backgroundColor = buttonTextColor
     }
 }

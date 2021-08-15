@@ -175,7 +175,7 @@ class GeneratorViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
         switch porkBackFatTextField.text {
             case "背脂抜き":
-                garlicText = "アブラヌキ"
+                porkBackFatText = "アブラヌキ"
             case "背脂少なめ":
                 porkBackFatText = "アブラスクナメ"
             case "背脂普通":
