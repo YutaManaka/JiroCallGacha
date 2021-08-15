@@ -19,6 +19,16 @@ class GeneratorViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var generatorButton: UIButton!
     @IBOutlet weak var GachaBtn: UIButton!
     
+    // その他パーツ宣言
+    @IBOutlet weak var textsView: UIView!
+    @IBOutlet weak var space: UIView!
+    @IBOutlet weak var space2: UIView!
+    @IBOutlet weak var space3: UIView!
+    @IBOutlet weak var inputSpace: UIView!
+    @IBOutlet weak var inputSpace2: UIView!
+    @IBOutlet weak var inputSpace3: UIView!
+    
+    
     // ドラムロールの宣言
     // TODO2 4つのtextfieldの位置をレスポンシブにする
     @IBOutlet weak var garlicTextField: UITextField!
@@ -230,10 +240,19 @@ class GeneratorViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         GachaBtn.setTitleColor(buttonTextColor, for: UIControl.State.normal)
         //背景色
         view.backgroundColor = buttonTextColor
+        textsView.backgroundColor = buttonTextColor
+        space.backgroundColor = buttonTextColor
+        space2.backgroundColor = buttonTextColor
+        space3.backgroundColor = buttonTextColor
+        inputSpace.backgroundColor = buttonTextColor
+        inputSpace2.backgroundColor = buttonTextColor
+        inputSpace3.backgroundColor = buttonTextColor
         //ドラムロール装飾
         garlicTextField.textAlignment = .center
         vegetableTextField.textAlignment = .center
         porkBackFatTextField.textAlignment = .center
         soySourceTextField.textAlignment = .center
+        //コールを複数行で表示できるようにする
+        callText.numberOfLines = 0
     }
 } //class終了

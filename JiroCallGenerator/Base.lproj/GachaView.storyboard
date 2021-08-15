@@ -90,7 +90,6 @@
                                     <constraint firstItem="UNg-Gx-8C6" firstAttribute="centerX" secondItem="WYW-6s-fxJ" secondAttribute="centerX" id="WCB-c7-M0n"/>
                                     <constraint firstItem="ZFb-he-2ao" firstAttribute="height" secondItem="WYW-6s-fxJ" secondAttribute="height" multiplier="0.1" id="Z0v-rd-60z"/>
                                     <constraint firstItem="3Z0-Fp-cuu" firstAttribute="height" secondItem="WYW-6s-fxJ" secondAttribute="height" multiplier="0.1" id="e1G-Qs-gPD"/>
-                                    <constraint firstItem="UNg-Gx-8C6" firstAttribute="centerY" secondItem="WYW-6s-fxJ" secondAttribute="centerY" id="qMX-9G-exF"/>
                                     <constraint firstItem="5pv-Kj-BSq" firstAttribute="height" secondItem="WYW-6s-fxJ" secondAttribute="height" multiplier="0.11" id="sJH-xY-ERz"/>
                                     <constraint firstItem="UNg-Gx-8C6" firstAttribute="height" secondItem="WYW-6s-fxJ" secondAttribute="height" multiplier="0.1" id="vuq-1s-47s"/>
                                 </constraints>
