@@ -1,7 +1,8 @@
-# 二郎コールガチャ
-<img src="https://user-images.githubusercontent.com/54618797/127159681-bf385025-0c10-4ba0-a166-ee8e9a47a628.png" width="200">
+# ラーメンコールガチャ
+<img src="https://user-images.githubusercontent.com/54618797/129471694-8f38c9c4-2d3b-487b-80bb-4650312c1b81.png" width="200">
 
-<img src="https://user-images.githubusercontent.com/54618797/126992921-def5c725-665c-4f8a-9a81-2714332043ed.png" width="200">
+<img src="https://user-images.githubusercontent.com/54618797/129471823-a4c02a96-7ec0-48d7-b1e1-bba9be29e9f6.png" width="200"> <img src="https://user-images.githubusercontent.com/54618797/129471832-35c3d6ba-06f0-4236-bc0a-ac2cb1557f55.png" width="200"> <img src="https://user-images.githubusercontent.com/54618797/129471849-31a0c467-0af0-4d0d-9f25-fd9046bd0afa.png" width="200"> <img src="https://user-images.githubusercontent.com/54618797/129471856-4a9198df-6832-45b8-b126-c7701ebc154c.png" width="200">
+
 
 ラーメン二郎のコールに迷ったことはありませんか？  
 「マシマシコールメーカー」には以下の2つのモードがあります。
