@@ -74,30 +74,31 @@ class GeneratorViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     // ピッカービューの行数
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if pickerView.tag == 1{
-            return garlicList.count
-        } else if pickerView.tag == 2{
-            return vegetableList.count
-        } else if pickerView.tag == 3{
-            return porkBackFatList.count
-        } else {
-            return soySourceList.count
+        switch pickerView.tag {
+            case 1: return garlicList.count
+            case 2: return vegetableList.count
+            case 3: return porkBackFatList.count
+            case 4: return soySourceList.count
+            default: return 0
         }
     }
     // ピッカービューに表示する内容
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView.tag == 1{
-            pickerNum = 1
-            return garlicList[row]
-        } else if pickerView.tag == 2{
-            pickerNum = 2
-            return vegetableList[row]
-        } else if pickerView.tag == 3{
-            pickerNum = 3
-            return porkBackFatList[row]
-        } else {
-            pickerNum = 4
-            return soySourceList[row]
+        switch pickerView.tag {
+            case 1:
+                pickerNum = 1
+                return garlicList[row]
+            case 2:
+                pickerNum = 2
+                return vegetableList[row]
+            case 3:
+                pickerNum = 3
+                return porkBackFatList[row]
+            case 4:
+                pickerNum = 4
+                return soySourceList[row]
+            default:
+                return "error"
         }
     }
     //データ選択時の呼び出しメソッド
@@ -105,26 +106,22 @@ class GeneratorViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     // TextFieldの値
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if pickerView.tag == 1{
-            garlicTextField.text = "\(garlicList[garlicPickerView.selectedRow(inComponent: 0)])"
-        } else if pickerView.tag == 2{
-            vegetableTextField.text = "\(vegetableList[vegetablePickerView.selectedRow(inComponent: 0)])"
-        } else if pickerView.tag == 3{
-            porkBackFatTextField.text = "\(porkBackFatList[porkBackFatPickerView.selectedRow(inComponent: 0)])"
-        } else {
-            soySourceTextField.text = "\(soySourceList[soySourcePickerView.selectedRow(inComponent: 0)])"
+        switch pickerView.tag {
+            case 1: garlicTextField.text = "\(garlicList[garlicPickerView.selectedRow(inComponent: 0)])"
+            case 2: vegetableTextField.text = "\(vegetableList[vegetablePickerView.selectedRow(inComponent: 0)])"
+            case 3: porkBackFatTextField.text = "\(porkBackFatList[porkBackFatPickerView.selectedRow(inComponent: 0)])"
+            case 4: soySourceTextField.text = "\(soySourceList[soySourcePickerView.selectedRow(inComponent: 0)])"
+            default: break
         }
     }
     // doneボタンの動作
     @objc func done() {
-        if pickerNum == 1{
-            garlicTextField.text = "\(garlicList[garlicPickerView.selectedRow(inComponent: 0)])"
-        } else if pickerNum == 2{
-            vegetableTextField.text = "\(vegetableList[vegetablePickerView.selectedRow(inComponent: 0)])"
-        } else if pickerNum == 3{
-            porkBackFatTextField.text = "\(porkBackFatList[porkBackFatPickerView.selectedRow(inComponent: 0)])"
-        } else {
-            soySourceTextField.text = "\(soySourceList[soySourcePickerView.selectedRow(inComponent: 0)])"
+        switch pickerNum {
+            case 1: garlicTextField.text = "\(garlicList[garlicPickerView.selectedRow(inComponent: 0)])"
+            case 2: vegetableTextField.text = "\(vegetableList[vegetablePickerView.selectedRow(inComponent: 0)])"
+            case 3: porkBackFatTextField.text = "\(porkBackFatList[porkBackFatPickerView.selectedRow(inComponent: 0)])"
+            case 4: soySourceTextField.text = "\(soySourceList[soySourcePickerView.selectedRow(inComponent: 0)])"
+            default: break
         }
         view.endEditing(true)
     }
@@ -148,52 +145,32 @@ class GeneratorViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     // TODO ボタンを押したらコールが出る処理
     @IBAction func generateCall(_ sender: Any) {
         switch garlicTextField.text {
-            case "ニンニク抜き":
-                garlicText = "ニンニクヌキ"
-            case "ニンニク少なめ":
-                garlicText = "ニンニクスクナメ"
-            case "ニンニク普通":
-                garlicText = ""
-            case "ニンニク多め":
-                garlicText = "ニンニクマシ"
-            case "ニンニク超多め":
-                garlicText = "ニンニクマシマシ"
-            default:
-                garlicText = ""
+            case "ニンニク抜き": garlicText = "ニンニクヌキ"
+            case "ニンニク少なめ": garlicText = "ニンニクスクナメ"
+            case "ニンニク普通": garlicText = ""
+            case "ニンニク多め": garlicText = "ニンニクマシ"
+            case "ニンニク超多め": garlicText = "ニンニクマシマシ"
+            default: garlicText = ""
         }
         switch vegetableTextField.text {
-            case "ヤサイ少なめ":
-                vegetableText = "ヤサイスクナメ"
-            case "ヤサイ普通":
-                vegetableText = ""
-            case "ヤサイ多め":
-                vegetableText = "ヤサイマシ"
-            case "ヤサイ超多め":
-                vegetableText = "ヤサイマシマシ"
-            default:
-                vegetableText = ""
+            case "ヤサイ少なめ": vegetableText = "ヤサイスクナメ"
+            case "ヤサイ普通": vegetableText = ""
+            case "ヤサイ多め": vegetableText = "ヤサイマシ"
+            case "ヤサイ超多め": vegetableText = "ヤサイマシマシ"
+            default: vegetableText = ""
         }
         switch porkBackFatTextField.text {
-            case "背脂抜き":
-                porkBackFatText = "アブラヌキ"
-            case "背脂少なめ":
-                porkBackFatText = "アブラスクナメ"
-            case "背脂普通":
-                porkBackFatText = ""
-            case "背脂多め":
-                porkBackFatText = "アブラマシ"
-            case "背脂超多め":
-                porkBackFatText = "アブラマシマシ"
-            default:
-                porkBackFatText = ""
+            case "背脂抜き": porkBackFatText = "アブラヌキ"
+            case "背脂少なめ": porkBackFatText = "アブラスクナメ"
+            case "背脂普通": porkBackFatText = ""
+            case "背脂多め": porkBackFatText = "アブラマシ"
+            case "背脂超多め": porkBackFatText = "アブラマシマシ"
+            default: porkBackFatText = ""
         }
         switch soySourceTextField.text {
-            case "味普通":
-                soySourceText = ""
-            case "味濃いめ":
-                soySourceText = "カラメ"
-            default:
-                soySourceText = ""
+            case "味普通": soySourceText = ""
+            case "味濃いめ": soySourceText = "カラメ"
+            default: soySourceText = ""
         }
         if garlicText.isEmpty && vegetableText.isEmpty && porkBackFatText.isEmpty && soySourceText.isEmpty {
             callText.text = "フツウ"
