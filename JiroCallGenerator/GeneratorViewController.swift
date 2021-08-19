@@ -75,7 +75,7 @@ class GeneratorViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     // ピッカービューの行数
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         switch pickerView.tag {
-            case 1: return garlicList.count
+        case 1: return AppConstants.gachaGarlic.count
             case 2: return vegetableList.count
             case 3: return porkBackFatList.count
             case 4: return soySourceList.count

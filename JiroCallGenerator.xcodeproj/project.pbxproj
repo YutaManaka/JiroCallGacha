@@ -11,6 +11,7 @@
 		F52CA48826B2DAF400ECD1F9 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52CA48726B2DAF400ECD1F9 /* FirstViewController.swift */; };
 		F52CA48C26B2E15C00ECD1F9 /* GeneratorView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F52CA48B26B2E15C00ECD1F9 /* GeneratorView.storyboard */; };
 		F52CA48E26B2E17B00ECD1F9 /* GeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52CA48D26B2E17B00ECD1F9 /* GeneratorViewController.swift */; };
+		F5A37BD626CE8EBE00D301AE /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A37BD526CE8EBE00D301AE /* AppConstants.swift */; };
 		F5F3DC0826AA581000128973 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F3DC0726AA581000128973 /* AppDelegate.swift */; };
 		F5F3DC0A26AA581000128973 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F3DC0926AA581000128973 /* SceneDelegate.swift */; };
 		F5F3DC0C26AA581000128973 /* GachaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F3DC0B26AA581000128973 /* GachaViewController.swift */; };
@@ -43,6 +44,7 @@
 		F52CA48726B2DAF400ECD1F9 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		F52CA48B26B2E15C00ECD1F9 /* GeneratorView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GeneratorView.storyboard; sourceTree = "<group>"; };
 		F52CA48D26B2E17B00ECD1F9 /* GeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorViewController.swift; sourceTree = "<group>"; };
+		F5A37BD526CE8EBE00D301AE /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		F5F3DC0426AA581000128973 /* JiroCallGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JiroCallGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5F3DC0726AA581000128973 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5F3DC0926AA581000128973 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 		F5F3DC0626AA581000128973 /* JiroCallGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				F5A37BD526CE8EBE00D301AE /* AppConstants.swift */,
 				F5F3DC0726AA581000128973 /* AppDelegate.swift */,
 				F5F3DC0926AA581000128973 /* SceneDelegate.swift */,
 				F5F3DC0B26AA581000128973 /* GachaViewController.swift */,
@@ -273,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F52CA48826B2DAF400ECD1F9 /* FirstViewController.swift in Sources */,
+				F5A37BD626CE8EBE00D301AE /* AppConstants.swift in Sources */,
 				F52CA48E26B2E17B00ECD1F9 /* GeneratorViewController.swift in Sources */,
 				F5F3DC0C26AA581000128973 /* GachaViewController.swift in Sources */,
 				F5F3DC0826AA581000128973 /* AppDelegate.swift in Sources */,

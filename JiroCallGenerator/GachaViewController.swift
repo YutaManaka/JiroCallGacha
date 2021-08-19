@@ -32,18 +32,10 @@ class GachaViewController: UIViewController {
     // gachaButtonボタンを押した際の操作
     @IBAction func garlic(_ sender: Any) {
         garlicNumber = Int(arc4random_uniform(5))
+        
         switch garlicNumber {
-            case 1:
-                garlicText.text = "ニンニクヌキ"
-                garlicText.isHidden = false
-            case 2:
-                garlicText.text = "ニンニクスクナメ"
-                garlicText.isHidden = false
-            case 3:
-                garlicText.text = "ニンニクマシ"
-                garlicText.isHidden = false
-            case 4:
-                garlicText.text = "ニンニクマシマシ"
+            case 1, 2, 3, 4:
+                garlicText.text = AppConstants.gachaGarlic[garlicNumber]
                 garlicText.isHidden = false
             default:
                 garlicText.text = ""
@@ -51,14 +43,8 @@ class GachaViewController: UIViewController {
         }
         vegetableNumber = Int(arc4random_uniform(4))
         switch vegetableNumber {
-            case 1:
-                vegetableText.text = "ヤサイスクナメ"
-                vegetableText.isHidden = false
-            case 2:
-                vegetableText.text = "ヤサイマシ"
-                vegetableText.isHidden = false
-            case 3:
-                vegetableText.text = "ヤサイマシマシ"
+            case 1, 2, 3:
+                vegetableText.text = AppConstants.gachaVegetable[vegetableNumber]
                 vegetableText.isHidden = false
             default:
                 vegetableText.text = ""
@@ -66,17 +52,8 @@ class GachaViewController: UIViewController {
         }
         porkBackFatNumber = Int(arc4random_uniform(5))
         switch porkBackFatNumber {
-            case 1:
-                porkBackFatText.text = "アブラヌキ"
-                porkBackFatText.isHidden = false
-            case 2:
-                porkBackFatText.text = "アブラスクナメ"
-                porkBackFatText.isHidden = false
-            case 3:
-                porkBackFatText.text = "アブラマシ"
-                porkBackFatText.isHidden = false
-            case 4:
-                porkBackFatText.text = "アブラマシマシ"
+            case 1, 2, 3, 4:
+                porkBackFatText.text = AppConstants.gachaPorkBackFat[porkBackFatNumber]
                 porkBackFatText.isHidden = false
             default:
                 porkBackFatText.text = ""
@@ -85,7 +62,7 @@ class GachaViewController: UIViewController {
         soySouceNumber = Int(arc4random_uniform(2))
         switch soySouceNumber {
             case 1:
-                soySourceText.text = "カラメ"
+                soySourceText.text = AppConstants.gachaSoySouce[soySouceNumber]
                 soySourceText.isHidden = false
             default:
                 soySourceText.text = ""
