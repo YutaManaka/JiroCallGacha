@@ -9,8 +9,8 @@ import UIKit
 
 class GachaViewController: UIViewController {
     //ボタンの宣言
-    @IBOutlet weak var gacyaButton: UIButton!
-    @IBOutlet weak var GeneratorBtn: UIButton!
+    @IBOutlet weak var gachaButton: UIButton!
+    @IBOutlet weak var generatorLink: UIButton!
     // 乱数の宣言
     var garlicNumber = 0
     var vegetableNumber = 0
@@ -29,7 +29,7 @@ class GachaViewController: UIViewController {
     @IBOutlet weak var space2: UIView!
     @IBOutlet weak var space3: UIView!
 
-    // gacyaButtonボタンを押した際の操作
+    // gachaButtonボタンを押した際の操作
     @IBAction func garlic(_ sender: Any) {
         garlicNumber = Int(arc4random_uniform(5))
         switch garlicNumber {
@@ -99,8 +99,8 @@ class GachaViewController: UIViewController {
         }
     }
     
-    //遷移ボタンGeneratorBtnを押したときの動作
-    @IBAction func tapGeneratorBtn(_ sender: Any) {
+    //遷移ボタンgeneratorLinkを押したときの動作
+    @IBAction func tapGeneratorLink(_ sender: Any) {
         // Storyboardのインスタンスを名前指定で取得する
         let storyboard = UIStoryboard(name: "GeneratorView", bundle: nil)
         // Storyboard内で'is initial'に指定されているViewControllerを取得する
@@ -116,14 +116,14 @@ class GachaViewController: UIViewController {
         super.viewDidLoad()
         // ボタンの装飾
         let buttonColor = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1.0)
-        gacyaButton.backgroundColor = buttonColor
-        gacyaButton.layer.borderWidth = 5
-        gacyaButton.layer.borderColor = UIColor.red.cgColor
-        gacyaButton.layer.cornerRadius = 5.0
-        GeneratorBtn.backgroundColor = buttonColor
-        GeneratorBtn.layer.cornerRadius = 5.0
+        gachaButton.backgroundColor = buttonColor
+        gachaButton.layer.borderWidth = 5
+        gachaButton.layer.borderColor = UIColor.red.cgColor
+        gachaButton.layer.cornerRadius = 5.0
+        generatorLink.backgroundColor = buttonColor
+        generatorLink.layer.cornerRadius = 5.0
         let buttonTextColor = UIColor(red: 247/255, green: 229/255, blue: 4/255, alpha: 1.0)
-        gacyaButton.setTitleColor(buttonTextColor, for: UIControl.State.normal)
+        gachaButton.setTitleColor(buttonTextColor, for: UIControl.State.normal)
         //テキストの装飾
         UILabel.appearance().textAlignment = NSTextAlignment.center
         UILabel.appearance().font = UIFont(name: "HelveticaNeue-Bold", size: 28.0)

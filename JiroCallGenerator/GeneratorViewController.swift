@@ -17,7 +17,7 @@ class GeneratorViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     // ボタンの宣言
     @IBOutlet weak var generatorButton: UIButton!
-    @IBOutlet weak var GachaBtn: UIButton!
+    @IBOutlet weak var gachaLink: UIButton!
     
     // その他パーツ宣言
     @IBOutlet weak var textsView: UIView!
@@ -180,7 +180,7 @@ class GeneratorViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     //遷移ボタンの動作
-    @IBAction func tapGachaBtn(_ sender: Any) {
+    @IBAction func tapGachaLink(_ sender: Any) {
         // Storyboardのインスタンスを名前指定で取得する
         let storyboard = UIStoryboard(name: "GachaView", bundle: nil)
         // Storyboard内で'is initial'に指定されているViewControllerを取得する
@@ -211,10 +211,10 @@ class GeneratorViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         generatorButton.layer.borderWidth = 5
         generatorButton.layer.borderColor = UIColor.red.cgColor
         generatorButton.layer.cornerRadius = 5.0
-        GachaBtn.backgroundColor = buttonColor
-        GachaBtn.layer.cornerRadius = 5.0
+        gachaLink.backgroundColor = buttonColor
+        gachaLink.layer.cornerRadius = 5.0
         let buttonTextColor = UIColor(red: 247/255, green: 229/255, blue: 4/255, alpha: 1.0)
-        GachaBtn.setTitleColor(buttonTextColor, for: UIControl.State.normal)
+        gachaLink.setTitleColor(buttonTextColor, for: UIControl.State.normal)
         //背景色
         view.backgroundColor = buttonTextColor
         textsView.backgroundColor = buttonTextColor

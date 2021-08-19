@@ -12,17 +12,17 @@
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="GeneratorViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="GeneratorViewController" customModule="JiroCallGenerator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc" userLabel="view">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたの二郎コールは..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QR6-Er-4oG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたの二郎コールは..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QR6-Er-4oG" userLabel="text">
                                 <rect key="frame" x="0.0" y="44" width="414" height="82"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZ7-NE-AgM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZ7-NE-AgM" userLabel="callText">
                                 <rect key="frame" x="41.5" y="126" width="331" height="306.5"/>
                                 <string key="text">好きなトッピングを
 選んでください。</string>
@@ -34,7 +34,7 @@
                                 <rect key="frame" x="0.0" y="596" width="414" height="20.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3kX-Yk-Akj">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3kX-Yk-Akj" userLabel="generatorButton">
                                 <rect key="frame" x="83" y="616.5" width="248" height="123"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <state key="normal">
@@ -58,7 +58,7 @@
                                 <rect key="frame" x="0.0" y="739.5" width="414" height="20.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dff-Ka-Xjg">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dff-Ka-Xjg" userLabel="gachaLink">
                                 <rect key="frame" x="124" y="760" width="166" height="81.5"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -72,7 +72,7 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <action selector="tapGachaBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="WlZ-zs-quY"/>
+                                    <action selector="tapGachaLink:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="G9Y-IM-XlJ"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o07-ri-I0Z" userLabel="space3">
@@ -82,7 +82,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LM0-fW-L3d" userLabel="textsView">
                                 <rect key="frame" x="0.0" y="432.5" width="414" height="163.5"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ニンニク" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="77r-6h-Gta" userLabel="Garlic Input">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ニンニク" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="77r-6h-Gta" userLabel="garlicInput">
                                         <rect key="frame" x="124" y="0.0" width="166" height="35"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -91,7 +91,7 @@
                                         <rect key="frame" x="0.0" y="35" width="414" height="8"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ヤサイ" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FLt-Pn-KI1" userLabel="Vegetable Input">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ヤサイ" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FLt-Pn-KI1" userLabel="vegetableInput">
                                         <rect key="frame" x="124" y="43" width="166" height="35"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -100,12 +100,12 @@
                                         <rect key="frame" x="0.0" y="78" width="414" height="8"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="アブラ" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R6q-8n-zXM" userLabel="Pork Back Fat Input">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="アブラ" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R6q-8n-zXM" userLabel="porkBackFatInput">
                                         <rect key="frame" x="124" y="86" width="166" height="34.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="カラメ" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2gr-Os-I3Z" userLabel="Soy Souce Input">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="カラメ" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2gr-Os-I3Z" userLabel="soySouceInput">
                                         <rect key="frame" x="124" y="129" width="166" height="34.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -148,7 +148,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre" userLabel="safeArea"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="zZ7-NE-AgM" firstAttribute="width" secondItem="vDu-zF-Fre" secondAttribute="width" multiplier="0.8" id="0CV-sY-0ii"/>
@@ -188,8 +188,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="GachaBtn" destination="dff-Ka-Xjg" id="gyF-4d-gLv"/>
                         <outlet property="callText" destination="zZ7-NE-AgM" id="v88-U6-JaX"/>
+                        <outlet property="gachaLink" destination="dff-Ka-Xjg" id="1Xw-AL-gyZ"/>
                         <outlet property="garlicTextField" destination="77r-6h-Gta" id="R1O-S6-Dsc"/>
                         <outlet property="generatorButton" destination="3kX-Yk-Akj" id="mvE-9i-Hex"/>
                         <outlet property="inputSpace" destination="h6o-bk-27e" id="DL0-hb-D0e"/>

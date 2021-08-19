@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="59b-Aw-gQd">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="59b-Aw-gQd" userLabel="generatorLink">
                                 <rect key="frame" x="57" y="533.5" width="300" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="3tx-CU-H4C"/>
@@ -34,10 +34,10 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <action selector="tapGeneratorBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0R7-k0-aVZ"/>
+                                    <action selector="tapGeneratorLink:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="l1O-ev-qol"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iv1-wh-9vC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iv1-wh-9vC" userLabel="gachaLink">
                                 <rect key="frame" x="57" y="309.5" width="300" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="z0z-e8-2UW"/>
@@ -55,11 +55,11 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <action selector="tapGachaBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hxu-76-NMh"/>
+                                    <action selector="tapGachaLink:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Baa-jc-k7X"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre" userLabel="safeArea"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="59b-Aw-gQd" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="1.3" constant="1" id="6ZD-vk-lib"/>
@@ -69,8 +69,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="GachaBtn" destination="iv1-wh-9vC" id="RYr-IB-q4t"/>
-                        <outlet property="GeneratorBtn" destination="59b-Aw-gQd" id="q92-Sr-ijw"/>
+                        <outlet property="gachaLink" destination="iv1-wh-9vC" id="Sye-oJ-SCG"/>
+                        <outlet property="generatorLink" destination="59b-Aw-gQd" id="0xf-IJ-p8l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
