@@ -42,10 +42,7 @@ class GeneratorViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     var vegetablePickerView = UIPickerView()
     var porkBackFatPickerView = UIPickerView()
     var soySourcePickerView = UIPickerView()
-    let garlicList: [String] = ["ニンニク抜き", "ニンニク少なめ", "ニンニク普通", "ニンニク多め", "ニンニク超多め"]
-    let vegetableList: [String] = ["ヤサイ少なめ", "ヤサイ普通", "ヤサイ多め", "ヤサイ超多め"]
-    let porkBackFatList: [String] = ["背脂抜き", "背脂少なめ", "背脂普通", "背脂多め", "背脂超多め"]
-    let soySourceList: [String] = ["味普通", "味濃いめ"]
+
     var pickerNum = 0
     
     // ドラムロールの動作
@@ -74,32 +71,12 @@ class GeneratorViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     // ピッカービューの行数
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        switch pickerView.tag {
-        case 1: return AppConstants.gachaGarlic.count
-            case 2: return vegetableList.count
-            case 3: return porkBackFatList.count
-            case 4: return soySourceList.count
-            default: return 0
-        }
+        return AppConstants.callList[pickerView.tag - 1].count
     }
     // ピッカービューに表示する内容
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        switch pickerView.tag {
-            case 1:
-                pickerNum = 1
-                return garlicList[row]
-            case 2:
-                pickerNum = 2
-                return vegetableList[row]
-            case 3:
-                pickerNum = 3
-                return porkBackFatList[row]
-            case 4:
-                pickerNum = 4
-                return soySourceList[row]
-            default:
-                return "error"
-        }
+        pickerNum = pickerView.tag
+        return AppConstants.callList[pickerView.tag - 1][row]
     }
     //データ選択時の呼び出しメソッド
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -107,20 +84,20 @@ class GeneratorViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     // TextFieldの値
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch pickerView.tag {
-            case 1: garlicTextField.text = "\(garlicList[garlicPickerView.selectedRow(inComponent: 0)])"
-            case 2: vegetableTextField.text = "\(vegetableList[vegetablePickerView.selectedRow(inComponent: 0)])"
-            case 3: porkBackFatTextField.text = "\(porkBackFatList[porkBackFatPickerView.selectedRow(inComponent: 0)])"
-            case 4: soySourceTextField.text = "\(soySourceList[soySourcePickerView.selectedRow(inComponent: 0)])"
+            case 1: garlicTextField.text = "\(AppConstants.callList[pickerView.tag - 1][garlicPickerView.selectedRow(inComponent: 0)])"
+            case 2: vegetableTextField.text = "\(AppConstants.callList[pickerView.tag - 1][vegetablePickerView.selectedRow(inComponent: 0)])"
+            case 3: porkBackFatTextField.text = "\(AppConstants.callList[pickerView.tag - 1][porkBackFatPickerView.selectedRow(inComponent: 0)])"
+            case 4: soySourceTextField.text = "\(AppConstants.callList[pickerView.tag - 1][soySourcePickerView.selectedRow(inComponent: 0)])"
             default: break
         }
     }
     // doneボタンの動作
     @objc func done() {
         switch pickerNum {
-            case 1: garlicTextField.text = "\(garlicList[garlicPickerView.selectedRow(inComponent: 0)])"
-            case 2: vegetableTextField.text = "\(vegetableList[vegetablePickerView.selectedRow(inComponent: 0)])"
-            case 3: porkBackFatTextField.text = "\(porkBackFatList[porkBackFatPickerView.selectedRow(inComponent: 0)])"
-            case 4: soySourceTextField.text = "\(soySourceList[soySourcePickerView.selectedRow(inComponent: 0)])"
+            case 1: garlicTextField.text = "\(AppConstants.callList[pickerNum - 1][garlicPickerView.selectedRow(inComponent: 0)])"
+            case 2: vegetableTextField.text = "\(AppConstants.callList[pickerNum - 1][vegetablePickerView.selectedRow(inComponent: 0)])"
+            case 3: porkBackFatTextField.text = "\(AppConstants.callList[pickerNum - 1][porkBackFatPickerView.selectedRow(inComponent: 0)])"
+            case 4: soySourceTextField.text = "\(AppConstants.callList[pickerNum - 1][soySourcePickerView.selectedRow(inComponent: 0)])"
             default: break
         }
         view.endEditing(true)
@@ -142,36 +119,12 @@ class GeneratorViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     // ドラムロール設定ここまで
     
     // generatorButtonボタンを押したときの動作
-    // TODO ボタンを押したらコールが出る処理
     @IBAction func generateCall(_ sender: Any) {
-        switch garlicTextField.text {
-            case "ニンニク抜き": garlicText = "ニンニクヌキ"
-            case "ニンニク少なめ": garlicText = "ニンニクスクナメ"
-            case "ニンニク普通": garlicText = ""
-            case "ニンニク多め": garlicText = "ニンニクマシ"
-            case "ニンニク超多め": garlicText = "ニンニクマシマシ"
-            default: garlicText = ""
-        }
-        switch vegetableTextField.text {
-            case "ヤサイ少なめ": vegetableText = "ヤサイスクナメ"
-            case "ヤサイ普通": vegetableText = ""
-            case "ヤサイ多め": vegetableText = "ヤサイマシ"
-            case "ヤサイ超多め": vegetableText = "ヤサイマシマシ"
-            default: vegetableText = ""
-        }
-        switch porkBackFatTextField.text {
-            case "背脂抜き": porkBackFatText = "アブラヌキ"
-            case "背脂少なめ": porkBackFatText = "アブラスクナメ"
-            case "背脂普通": porkBackFatText = ""
-            case "背脂多め": porkBackFatText = "アブラマシ"
-            case "背脂超多め": porkBackFatText = "アブラマシマシ"
-            default: porkBackFatText = ""
-        }
-        switch soySourceTextField.text {
-            case "味普通": soySourceText = ""
-            case "味濃いめ": soySourceText = "カラメ"
-            default: soySourceText = ""
-        }
+        garlicText = AppConstants.CallList[0][garlicTextField.text!] ?? ""
+        vegetableText = AppConstants.CallList[1][vegetableTextField.text!] ?? ""
+        porkBackFatText = AppConstants.CallList[2][porkBackFatTextField.text!] ?? ""
+        soySourceText = AppConstants.CallList[3][soySourceTextField.text!] ?? ""
+
         if garlicText.isEmpty && vegetableText.isEmpty && porkBackFatText.isEmpty && soySourceText.isEmpty {
             callText.text = "フツウ"
         } else {
